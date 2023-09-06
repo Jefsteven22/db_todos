@@ -27,3 +27,5 @@ db.sync()
 app.listen(PORT, () => {
   console.log(`Server activo y escuchando en el puerto ${PORT}`);
 });
+
+

@@ -1,5 +1,31 @@
 import Todo from "../../models/todos.model.js";
 
+export const getAllCompletedTrue = async (req, res) => {
+  try {
+    const todos = await Todo.findAll({
+      where: {
+        completed: true
+      }
+    });
+    res.json(todos);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+}
+
+export const getAllCompletedFalse = async (req, res) => {
+  try {
+    const todos = await Todo.findAll({
+      where: {
+        completed: false
+      }
+    });
+    res.json(todos);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+}
+
 export const getAllTodos = async (req, res) => {
   try {
     const todos = await Todo.findAll();
