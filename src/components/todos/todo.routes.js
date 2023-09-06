@@ -12,7 +12,7 @@ const router = Router();
 
 router.get("/todos", getAllTodos);
 router.get("/todos/:id", getTodosById);
-router.get("/todos", postTodos);
+router.post("/todos", postTodos);
 router.put("/todos/:id", putById);
 router.patch("/todos/:id", patchById);
 router.delete("/todos/:id", deleteById);
